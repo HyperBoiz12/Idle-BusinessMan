@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idle Game with Google Login</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <title>Idle Business Empire</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <div class="game-header">
-            <h1>Idle Game</h1>
-            <div id="login-buttons">
-                <button id="googleLoginBtn" onclick="googleLogin()">Login with Google</button>
-                <button id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
-            </div>
-        </div>
-        
-        <div id="gameScreen" style="display:none;">
-            <p>Money: <span id="moneyDisplay">0</span></p>
-            <p>Money per click: <span id="moneyPerClick">1</span></p>
-            <button id="clickBtn" onclick="earnMoney()">Click to Earn</button>
-            <br>
-            <button id="upgrade1Btn" onclick="purchaseUpgrade()">Buy Upgrade - 10</button>
-            <br>
-            <button id="upgrade2Btn" onclick="purchaseUpgrade2()">Buy Upgrade2 - 50</button>
-            <br>
-            <button id="manager1Btn" onclick="hireManager()">Hire Manager - 100</button>
-        </div>
-        
-        <div id="errorMessage" style="display: none; color: red;"></div>
-    </div>
+    <div id="game-container">
+        <h1>Business Empire</h1>
+        <div id="money">Money: $0</div>
+        <div id="earn-rate">Earnings per click: $1</div>
+        <button id="click-btn">Earn Money</button>
+        <button id="prestige-btn" style="display:none;">Prestige</button>
 
-    <script src="game.js"></script>
+        <h2>Businesses</h2>
+        <div id="businesses"></div>
+
+        <h2>Upgrades</h2>
+        <div id="upgrades"></div>
+
+        <h2>Game Stats</h2>
+        <div id="game-stats">
+            <p>Level: <span id="level">1</span></p>
+            <p>Offline Earnings: <span id="offline-earnings">$0</span></p>
+        </div>
+        
+        <div id="achievement-message"></div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
